@@ -1,0 +1,90 @@
+- id: vet
+  name: go vet
+  entry: go vet
+  args: [./...]
+  pass_filenames: false
+  language: golang
+  types: [go]
+- id: build
+  name: go build
+  entry: go build
+  args: [./...]
+  pass_filenames: false
+  language: golang
+  types: [go]
+- id: mod-tidy
+  name: go mod tidy
+  entry: go mod tidy
+  pass_filenames: false
+  language: golang
+  types: [go]
+- id: test
+  name: go test
+  entry: go test
+  args: [./...]
+  pass_filenames: false
+  language: golang
+  types: [go]
+- id: staticcheck
+  name: staticcheck (https://staticcheck.dev)
+  entry: staticcheck
+  args: [./...]
+  pass_filenames: false
+  language: golang
+  additional_dependencies: ['honnef.co/go/tools/cmd/staticcheck@2023.1.6']
+  types: [go]
+- id: revive
+  name: revive (https://revive.run)
+  entry: revive
+  args: [./...]
+  pass_filenames: false
+  language: golang
+  additional_dependencies: ['github.com/mgechev/revive@v1.3.6']
+  types: [go]
+- id: go-critic
+  name: go-critic (https://github.com/go-critic/go-critic)
+  entry: gocritic
+  args: [check, ./...]
+  pass_filenames: false
+  language: golang
+  additional_dependencies: ['github.com/go-critic/go-critic/cmd/gocritic@v0.11.0']
+  types: [go]
+- id: errname
+  name: errname (https://github.com/Antonboom/errname)
+  entry: errname
+  args: [./...]
+  pass_filenames: false
+  language: golang
+  additional_dependencies: ['github.com/Antonboom/errname@v0.1.12']
+  types: [go]
+- id: errcheck
+  name: errcheck (https://github.com/kisielk/errcheck)
+  types: [go]
+  pass_filenames: false
+  entry: errcheck
+  args: [./...]
+  language: golang
+  additional_dependencies: ['github.com/kisielk/errcheck@v1.6.3']
+- id: goimports
+  name: goimports
+  types: [go]
+  entry: failontext goimports
+  args: [-l, -w]
+  language: golang
+  additional_dependencies: ['golang.org/x/tools/cmd/goimports@v0.17.0']
+- id: godot
+  name: godot (https://github.com/tetafro/godot)
+  types: [go]
+  pass_filenames: false
+  entry: failontext godot
+  args: [.]
+  language: golang
+  additional_dependencies: ['github.com/tetafro/godot/cmd/godot@v1.4.16']
+- id: ineffassign
+  name: ineffassign (https://github.com/gordonklaus/ineffassign)
+  entry: ineffassign
+  args: [./...]
+  pass_filenames: false
+  language: golang
+  additional_dependencies: ['github.com/gordonklaus/ineffassign@v0.1.0']
+  types: [go]
