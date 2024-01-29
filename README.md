@@ -1,4 +1,4 @@
-# go-pre-commit-hooks: Go linter selection as managed pre-commit hooks
+# go-hooks: Go linter selection as managed pre-commit hooks
 
 This repository provides a small collection of [pre-commit](https://pre-commit.com/) hooks to build,
 test, and lint Go code.
