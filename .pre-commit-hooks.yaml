@@ -5,6 +5,7 @@
   pass_filenames: false
   language: golang
   types: [go]
+  description: Runs Go's native linter, go vet
 - id: build
   name: go build
   entry: go build
@@ -12,12 +13,14 @@
   pass_filenames: false
   language: golang
   types: [go]
+  description: Makes sure everything compiles, using go build
 - id: mod-tidy
   name: go mod tidy
   entry: go mod tidy
   pass_filenames: false
   language: golang
   types: [go]
+  description: Runs go mod tidy to sanitize go.mod/go.sum
 - id: test
   name: go test
   entry: go test
@@ -25,6 +28,7 @@
   pass_filenames: false
   language: golang
   types: [go]
+  description: Makes sure the tests pass, using go test
 - id: staticcheck
   name: staticcheck (https://staticcheck.dev)
   entry: staticcheck
@@ -33,6 +37,7 @@
   language: golang
   additional_dependencies: ['honnef.co/go/tools/cmd/staticcheck@2023.1.6']
   types: [go]
+  description: Popular and configurable linter with many checks
 - id: revive
   name: revive (https://revive.run)
   entry: revive
@@ -41,6 +46,7 @@
   language: golang
   additional_dependencies: ['github.com/mgechev/revive@v1.3.6']
   types: [go]
+  description: Fast and configurable successor of golint
 - id: go-critic
   name: go-critic (https://github.com/go-critic/go-critic)
   entry: gocritic
@@ -49,6 +55,7 @@
   language: golang
   additional_dependencies: ['github.com/go-critic/go-critic/cmd/gocritic@v0.11.0']
   types: [go]
+  description: Extensible linter to complete other existing tools
 - id: errname
   name: errname (https://github.com/Antonboom/errname)
   entry: errname
@@ -57,6 +64,7 @@
   language: golang
   additional_dependencies: ['github.com/Antonboom/errname@v0.1.12']
   types: [go]
+  description: Enforces naming conventions around error variables and types
 - id: errcheck
   name: errcheck (https://github.com/kisielk/errcheck)
   types: [go]
@@ -65,6 +73,7 @@
   args: [./...]
   language: golang
   additional_dependencies: ['github.com/kisielk/errcheck@v1.6.3']
+  description: Enforces error checking discipline
 - id: goimports
   name: goimports
   types: [go]
@@ -72,6 +81,7 @@
   args: [-l, -w]
   language: golang
   additional_dependencies: ['golang.org/x/tools/cmd/goimports@v0.17.0']
+  description: Formats go files and manages their package imports
 - id: godot
   name: godot (https://github.com/tetafro/godot)
   types: [go]
@@ -80,6 +90,7 @@
   args: [.]
   language: golang
   additional_dependencies: ['github.com/tetafro/godot/cmd/godot@v1.4.16']
+  description: Ensures API comments end with a dot
 - id: ineffassign
   name: ineffassign (https://github.com/gordonklaus/ineffassign)
   entry: ineffassign
@@ -88,3 +99,4 @@
   language: golang
   additional_dependencies: ['github.com/gordonklaus/ineffassign@v0.1.0']
   types: [go]
+  description: Complains about ineffectual assignments
