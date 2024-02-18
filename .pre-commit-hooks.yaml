@@ -44,7 +44,7 @@
   args: [./...]
   pass_filenames: false
   language: golang
-  additional_dependencies: ['github.com/mgechev/revive@v1.3.6']
+  additional_dependencies: ['github.com/mgechev/revive@v1.3.7']
   types: [go]
   description: Fast and configurable successor of golint
 - id: go-critic
@@ -53,7 +53,7 @@
   args: [check, ./...]
   pass_filenames: false
   language: golang
-  additional_dependencies: ['github.com/go-critic/go-critic/cmd/gocritic@v0.11.0']
+  additional_dependencies: ['github.com/go-critic/go-critic/cmd/gocritic@v0.11.1']
   types: [go]
   description: Extensible linter to complete other existing tools
 - id: errname
@@ -72,7 +72,7 @@
   entry: errcheck
   args: [./...]
   language: golang
-  additional_dependencies: ['github.com/kisielk/errcheck@v1.6.3']
+  additional_dependencies: ['github.com/kisielk/errcheck@v1.7.0']
   description: Enforces error checking discipline
 - id: goimports
   name: goimports
